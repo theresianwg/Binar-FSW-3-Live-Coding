@@ -1,8 +1,8 @@
-# Notes Live Coding
+# 📝 Notes Live Coding 📝
 
-## DAILY TASK 3 ( 17/03/2023 ) disini
+## 📌 DAILY TASK 3 ( 17/03/2023 ) disini
 
-## LC-8-Chapter-3
+## 📌 LC-8-Chapter-3
 - npm init
 - npm i express
 - index.js
