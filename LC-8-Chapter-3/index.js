@@ -36,6 +36,64 @@ app.get('/person', (req, res) => {
     })
 })
 
+// get person  by id (data satuan)
+app.get('/person/:id', (req, res) => {
+    // console.log(req)
+    // console.log(req.params);
+
+    const id = req.params.id * 1;
+    const person = persons.find(el => el.id === id);
+
+    res.status(200).json({
+        status: "success",
+        data: {
+            person
+        }
+    })
+})
+
+// HTTP method PUT = edit existing data
+app.put('/person/:id', (req, res)=> {
+    const id = req.params.id * 1;
+    const person = persons.find(el => el.id === id);
+
+    res.status(200).json({
+        status: "success",
+        message: `data dari id ${id} berhasil berubah`
+    })
+})
+
+// HTTP method DELETE = delete existing data
+app.delete('/person/:id', (req, res)=> {
+    const id = req.params.id * 1;
+    
+    const index = persons.findIndex(element => element.id === id);
+    const person = persons.find(el => el.id === id);
+
+    // validasi
+    if (!index) {
+        res.status(400).json({
+            status: "failed",
+            message: `karena person dengan id ${id} tersebut tidak ada`
+        })
+    }
+
+    console.log(index)
+    if (index !== -1) {
+        persons.splice(index, 1);
+    }
+
+    fs.writeFile(
+        `${__dirname}/person.json`,
+        JSON.stringify(persons),
+        errr => {
+            res.status(200).json({
+                status: "success",
+                message: `data dari id ${id} berhasil berubah`
+            })
+        }
+    )
+})
 
 app.post('/person', (req, res) => {
 
@@ -44,6 +102,25 @@ app.post('/person', (req, res) => {
     const newId = persons.length - 1 + 10;
     const newPerson = Object.assign({ id: newId }, req.body)
 
+    // validasi kalau namanya ga ada , maka ga bisa create data baru
+    const personName = persons.find(el => el.name === req.body.name);
+
+    const cukupUmur = req.body.age < 20
+
+    // validasi
+    if (personName) {
+        res.status(400).json({
+            status: "failed",
+            message: `name ${req.body.name} already exist`
+        })
+    }
+ 
+    else if (cukupUmur){
+        res.status(400).json({
+            status: "failed",
+            message: `umur ${req.body.name} adalah ${req.body.age} tahun, sehingga belum cukup`
+        })
+    }
     persons.push(newPerson);
     fs.writeFile(
         `${__dirname}/person.json`,
