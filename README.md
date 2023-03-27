@@ -15,7 +15,7 @@
 - npm run dev (langsung ini buat jalanin, biar nyambung demon nya)
 
 ### 🗓️ 27/03/2023
-- Shortcut data di person j.son dari miring ke bawah pakai `shift + alt + f`
+- Shortcut data di person.json dari miring ke bawah pakai `shift + alt + f`
 - biar di file.json nya kehapus/bertambah/update janlup ditambah `fs.writeFile`
 - cek delete di postman pilih yang `delete` di `delete data` dengan url `localhost:3000/person/17` <17 adalah id yang pengen di delete>
 - cek belum cukup umur pilih `post` di `Create user` dengan url `localhost:3000/person`, terus Body -> raw -> JSON input datanya
