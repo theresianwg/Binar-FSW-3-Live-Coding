@@ -1,6 +1,6 @@
 # 📝 Notes Live Coding 📝
 
-## 📌 DAILY TASK 3 - Chapter 2 ( 17/03/2023 ) disini
+## 📌 DAILY TASK 3 ( 17/03/2023 ) disini
 
 ## 📌 LC-8-Chapter-3
 
@@ -20,3 +20,8 @@
 - cek delete di postman pilih yang `delete` di `delete data` dengan url `localhost:3000/person/17` <17 adalah id yang pengen di delete>
 - cek belum cukup umur pilih `post` di `Create user` dengan url `localhost:3000/person`, terus Body -> raw -> JSON input datanya
 - cek edit pilih `put` di `update data` denganh url `localhost:3000/person/17` <17 adalah id yang pengen di ubah>
+
+### 🗓️ 29/03/2023 
+## OOP
+- shorcut copas cepat `shift + alt + arrow button bawah`
+- nama class depannya harus `uppercase` kalau variabel engga
