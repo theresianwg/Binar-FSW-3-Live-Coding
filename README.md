@@ -1,6 +1,6 @@
 # 📝 Notes Live Coding 📝
 
-## 📌 DAILY TASK 3 ( 17/03/2023 ) disini
+## 📌 DAILY TASK 3 - Chapter 2 ( 17/03/2023 ) disini
 
 ## 📌 LC-8-Chapter-3
 
