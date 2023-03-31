@@ -25,3 +25,6 @@
 ## OOP
 - shorcut copas cepat `shift + alt + arrow button bawah`
 - nama class depannya harus `uppercase` kalau variabel engga
+- 404 not found
+- 400 gagal/bad request
+- 201 sucess
